@@ -1,0 +1,60 @@
+{% extends "base.html" %} 
+{% block content %}
+<div id="wrapper">
+  {% include "sidemenu.html" %}
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content" class="mt-4">
+      <div class="container-fluid">
+        <h1 class="h3 mb-4 text-gray-800">Vendas</h1>
+        <div class="bg-white mb-4 shadow p-2 rounded">
+          <form class="flex navbar-search">
+            <div class="w-3/12 input-group ">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar" aria-label="Search" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="input-group w-2/12 ml-auto">
+              <input type="date" class="form-control bg-light border-0 small" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                  </button>
+              </div>
+          </div>
+            <button href="#" class="btn btn-primary btn-icon-split w-1/12 ml-2">
+              <span class="text">Upload</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="card shadow mb-4">
+          <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+              <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+              <div class="dropdown no-arrow">
+                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+              </div>
+          </div>
+          <!-- Card Body -->
+          <div class="card-body">
+              <div class="chart-area"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                  <canvas id="myAreaChart" width="667" height="320" style="display: block; width: 667px; height: 320px;" class="chartjs-render-monitor"></canvas>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
